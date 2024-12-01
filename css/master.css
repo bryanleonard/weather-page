@@ -1,0 +1,134 @@
+
+
+  :root {
+    /* Sunny Theme */
+    --background-color: #FFFAE5; /* Soft, pale yellow */
+    --primary-color: #005B99; /* Dark blue */
+    --secondary-color: #FFD700; /* Golden yellow */
+    --tertiary-color: #FF8C00; /* Bright orange */
+    --text-color: #333; /* Neutral dark text */
+
+    --secondary-rgb: 255, 215, 0;
+  }
+  
+
+  /* Rainy Theme */
+:root.rainy {
+    --background-color: #E3E4E6;
+    --primary-color: #5D737E;
+    --secondary-color: #A3C4BC;
+    --tertiary-color: #4B6587;
+    --text-color: #333;
+  }
+  
+  /* Snowy Theme */
+  :root.snowy {
+    --background-color: #F7FBFC;
+    --primary-color: #D0E8F2;
+    --secondary-color: #B5C9D5;
+    --tertiary-color: #1B3B5F;
+    --text-color: #333;
+  }
+  
+  /* Cloudy Theme */
+  :root.cloudy {
+    --background-color: #DFE4EA;
+    --primary-color: #A4B0BE;
+    --secondary-color: #CED6E0;
+    --tertiary-color: #576574;
+    --text-color: #333;
+  }
+  
+  /* Stormy Theme */
+  :root.stormy {
+    --background-color: #2F3542;
+    --primary-color: #3742FA;
+    --secondary-color: #576574;
+    --tertiary-color: #747D8C;
+    --text-color: #FFF;
+  }
+  
+  /* Sunset Theme */
+  :root.sunset {
+    --background-color: #FAD6A5;
+    --primary-color: #FF6B6B;
+    --secondary-color: #FFA502;
+    --tertiary-color: #5352ED;
+    --text-color: #333;
+  }
+  
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  /* Primary Elements */
+  .header, .button-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-primary:hover {
+    background-color: lighten(var(--primary-color), 10%);
+  }
+  
+  /* Secondary Elements */
+  .card, .button-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .button-secondary:hover {
+    background-color: darken(var(--secondary-color), 10%);
+  }
+  
+  /* Tertiary Elements */
+  .footer, .accent {
+    background-color: var(--tertiary-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0;
+  }
+  
+
+  .hero {
+    border-top: 1px solid var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    background: rgba(var(--secondary-rgb), 0.5);
+  }
