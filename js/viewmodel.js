@@ -14,6 +14,17 @@ export class ViewModel {
 		this.listeners = [];
 	}
 
+	// Subscribe to changes
+	subscribe(listener) {
+		this.listeners.push(listener);
+	}
+
+	// Notify listeners
+	notify() {
+		this.listeners.forEach((listener) => listener(this.state));
+	}
+
+
 	async loadWeather(endpoint) {
 		this.state.loadingWeather = true;
 		this.notify();
@@ -46,14 +57,6 @@ export class ViewModel {
 		}
 	}
 
-	// Subscribe to changes
-	subscribe(listener) {
-		this.listeners.push(listener);
-	}
 
 
-	// Notify listeners
-	notify() {
-		this.listeners.forEach((listener) => listener(this.state));
-	}
 }
