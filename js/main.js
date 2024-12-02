@@ -80,7 +80,7 @@ function updateView(state) {
 					<div class="card text-center">
                         <h5 class="text-center">${formatDate(data.date)}</h5>
                         <div class="col-12">
-                            <img src="/images/${data.weather}.png" class="img-fluid">
+                            <img src="./images/${data.weather}.png" class="img-fluid">
                         </div>
                         <div class="row">
                             <div class="col-6 ps-0 temp tempHi pt-1">H: ${convertToF(data.temp2m.max)} ºF</div>
