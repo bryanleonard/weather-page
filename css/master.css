@@ -1,134 +1,180 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
-  :root {
-    /* Sunny Theme */
-    --background-color: #FFFAE5; /* Soft, pale yellow */
-    --primary-color: #005B99; /* Dark blue */
-    --secondary-color: #FFD700; /* Golden yellow */
-    --tertiary-color: #FF8C00; /* Bright orange */
-    --text-color: #333; /* Neutral dark text */
+:root {
+	/* Sunny Theme */
+	--background-color: #fffae5; /* Soft, pale yellow */
+	--primary-color: #005b99; /* Dark blue */
+	--secondary-color: #ffd700; /* Golden yellow */
+	--tertiary-color: #ff8c00; /* Bright orange */
+	--text-color: #333; /* Neutral dark text */
+	--secondary-rgb: 255, 215, 0;
+}
 
-    --secondary-rgb: 255, 215, 0;
-  }
-  
-
-  /* Rainy Theme */
+/* Rainy Theme */
 :root.rainy {
-    --background-color: #E3E4E6;
-    --primary-color: #5D737E;
-    --secondary-color: #A3C4BC;
-    --tertiary-color: #4B6587;
-    --text-color: #333;
-  }
-  
-  /* Snowy Theme */
-  :root.snowy {
-    --background-color: #F7FBFC;
-    --primary-color: #D0E8F2;
-    --secondary-color: #B5C9D5;
-    --tertiary-color: #1B3B5F;
-    --text-color: #333;
-  }
-  
-  /* Cloudy Theme */
-  :root.cloudy {
-    --background-color: #DFE4EA;
-    --primary-color: #A4B0BE;
-    --secondary-color: #CED6E0;
-    --tertiary-color: #576574;
-    --text-color: #333;
-  }
-  
-  /* Stormy Theme */
-  :root.stormy {
-    --background-color: #2F3542;
-    --primary-color: #3742FA;
-    --secondary-color: #576574;
-    --tertiary-color: #747D8C;
-    --text-color: #FFF;
-  }
-  
-  /* Sunset Theme */
-  :root.sunset {
-    --background-color: #FAD6A5;
-    --primary-color: #FF6B6B;
-    --secondary-color: #FFA502;
-    --tertiary-color: #5352ED;
-    --text-color: #333;
-  }
-  
-  
-  body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-  
-  /* Primary Elements */
-  .header, .button-primary {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .button-primary:hover {
-    background-color: lighten(var(--primary-color), 10%);
-  }
-  
-  /* Secondary Elements */
-  .card, .button-secondary {
-    background-color: var(--secondary-color);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .button-secondary:hover {
-    background-color: darken(var(--secondary-color), 10%);
-  }
-  
-  /* Tertiary Elements */
-  .footer, .accent {
-    background-color: var(--tertiary-color);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  /* Layout */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .header {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .card {
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 0;
-  }
-  
+	--background-color: #e3e4e6;
+	--primary-color: #5d737e;
+	--secondary-color: #a3c4bc;
+	--tertiary-color: #4b6587;
+	--text-color: #333;
 
-  .hero {
-    border-top: 1px solid var(--secondary-color);
-    border-bottom: 1px solid var(--secondary-color);
-    background: rgba(var(--secondary-rgb), 0.5);
-  }
+	--secondary-rgb: 163, 196, 188;
+}
+
+/* Snowy Theme */
+:root.snowy {
+	--background-color: #f7fbfc;
+	--primary-color: #d0e8f2;
+	--secondary-color: #b5c9d5;
+	--tertiary-color: #1b3b5f;
+	--text-color: #333;
+
+	--secondary-rgb: 181, 201, 213;
+}
+
+/* Cloudy Theme */
+:root.cloudy {
+	--background-color: #dfe4ea;
+	--primary-color: #a4b0be;
+	--secondary-color: #ced6e0;
+	--tertiary-color: #576574;
+	--text-color: #333;
+
+	--secondary-rgb: 206, 214, 224;
+}
+
+/* Stormy Theme */
+:root.stormy {
+	--background-color: #2f3542;
+	--primary-color: #3742fa;
+	--secondary-color: #576574;
+	--tertiary-color: #747d8c;
+	--text-color: #fff;
+
+	--secondary-rgb: 87, 101, 116;
+}
+
+:root.stormy .card{
+
+	--text-color: #333;
+}
+
+/* Sunset Theme */
+:root.sunset {
+	--background-color: #fad6a5;
+	--primary-color: #ff6b6b;
+	--secondary-color: #ffa502;
+	--tertiary-color: #5352ed;
+	--text-color: #333;
+
+	--secondary-rgb: 250, 165, 2;
+}
+
+body {
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: "Roboto Flex", sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 99vh;
+}
+
+.wrapper {
+	min-height: calc(99vh - 3rem);
+}
+
+/* Primary Elements */
+.header {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/* Primary Elements */
+.button-primary {
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.button-primary:hover {
+	background-color: var(--primary-color);
+	filter: brightness(90%);
+	color: #fff;
+}
+
+@media (min-width: 768px) {
+	/* Secondary Elements */
+	.card-container {
+		/* background-color: v#fff;
+		color: var(--text-color);
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-size: 14px; */
+		padding-right: .8rem;
+	}
+
+	.card-container:last-child {
+		padding-right: 0;
+	}
+}
+
+.data {
+	display: flex;
+	justify-content: space-between; /* Ensures proper spacing */
+	margin: 0 auto;
+}
+ 
+
+/* Secondary Elements */
+.button-secondary {
+	background-color: var(--secondary-color);
+	color: #fff;
+}
+
+.button-secondary:hover {
+	background-color: var(--secondary-color);
+	filter: brightness(90%);
+	color: #fff;
+}
+
+/* Tertiary Elements */
+.footer,
+.accent {
+	background-color: var(--tertiary-color);
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+/* Layout */
+
+.header {
+	text-align: center;
+	padding: 20px;
+}
+
+.card {
+	margin: 20px 0;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+	text-align: center;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 0;
+}
+
+.hero {
+	border-top: 1px solid var(--secondary-color);
+	border-bottom: 1px solid var(--secondary-color);
+	background: rgba(var(--secondary-rgb), 0.5);
+}

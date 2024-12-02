@@ -1,45 +1,59 @@
 // viewModel.js
-import { fetchData } from './apiService.js';
+import { getWeather, getLocations } from "./apiservice.js";
 
 export class ViewModel {
-  constructor() {
-    this.state = { data: null, loading: false, error: null };
-    this.listeners = [];
-  }
+	constructor() {
+		this.state = {
+			weather: null,
+			locations: null,
+			loadingWeather: false,
+			loadingLocations: false,
+			errorWeather: null,
+			errorLocations: null,
+		};
+		this.listeners = [];
+	}
 
-  async loadData(endpoint) {
-    this.state.loading = true;
-    this.notify();
-    try {
-      const data = await fetchData(endpoint);
-      this.state.data = data;
-      this.state.error = null;
-    } catch (error) {
-      this.state.error = error.message;
-    } finally {
-      this.state.loading = false;
-      this.notify();
-    }
-  }
+	async loadWeather(endpoint) {
+		this.state.loadingWeather = true;
+		this.notify();
 
-  subscribe(listener) {
-    this.listeners.push(listener);
-  }
+		try {
+			const data = await getWeather(endpoint);
+			this.state.weather = data;
+			this.state.errorWeather = null;
+		} catch (error) {
+			this.state.errorWeather = error.message;
+		} finally {
+			this.state.loadingWeather = false;
+			this.notify();
+		}
+	}
 
-  notify() {
-    this.listeners.forEach((listener) => listener(this.state));
-  }
-}
+	// Fetch locations data
+	async loadLocations(endpoint) {
+		this.state.loadingLocations = true;
+		this.notify();
+		try {
+			const data = await getLocations(endpoint);
+			this.state.locations = data;
+			this.state.errorLocations = null;
+		} catch (error) {
+			this.state.errorLocations = error.message;
+		} finally {
+			this.state.loadingLocations = false;
+			this.notify();
+		}
+	}
+
+	// Subscribe to changes
+	subscribe(listener) {
+		this.listeners.push(listener);
+	}
 
 
-
-import { fetchData } from './apiservice.js';
-
-export class ViewModel {
-
-    constructor() {
-        this.state = {data: null, loading: false, error: null };
-        this.listeners = [];
-    }
-
+	// Notify listeners
+	notify() {
+		this.listeners.forEach((listener) => listener(this.state));
+	}
 }

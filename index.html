@@ -14,42 +14,104 @@
 	<link rel="stylesheet"
 		href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
 		integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous" />
+		
 	<link rel="stylesheet" href="css/master.css" />
 
 	<title>Weather API Project</title>
 </head>
 
 <body>
-	<div class="container">
-		<h1>Weather API Project</h1>
 
-		<select id="theme-switcher">
-			<option value="">Select Theme</option>
-			<option value="sunny">Sunny</option>
-			<option value="rainy">Rainy</option>
-			<option value="snowy">Snowy</option>
-			<option value="cloudy">Cloudy</option>
-			<option value="stormy">Stormy</option>
-			<option value="sunset">Sunset</option>
-		</select>
-
-		<div class="card">Dynamic theme content goes here!</div>
-		<button class="button-primary">Primary Button</button>
-		<button class="button-secondary">Secondary Button</button>
+<div class="wrapper">
+	
+	<div class="container mt-2">
+		<div class="row">
+			<div class="col-xs-12 col-sm-9 d-flex align-items-center">
+				<h2 class="m-0">Weather API Project</h2>
+			</div>
+			<div class="col-xs-12 col-sm-3">
+				<label for="theme-switcher" class="form-label mb-0">Theme</label>
+				<select id="theme-switcher" class="form-select form-select-sm">
+					<option value="sunny" selected>Sunny</option>
+					<option value="rainy">Rainy</option>
+					<option value="snowy">Snowy</option>
+					<option value="cloudy">Cloudy</option>
+					<option value="stormy">Stormy</option>
+					<option value="sunset">Sunset</option>
+				</select>
+			</div>
+		</div>
+		
 	</div>
 
-	<div class="container-fluid hero">
-		hi
-	</div>
+	<section class="hero my-3">
+
+
+
+		
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-6 mt-2">
+					<label for="locations" class="form-label mb-0">Locations</label>
+					<select id="locations" class="form-select form-select-sm">
+						<option value="Loading...">Loading...</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div id="loader" class="my-3">Loading...</div>
+			<div id="error"></div>
+
+			<div id="weather" class="d-md-flex">
+				<div class="card-container flex-fill">
+					<div class="card">Dynamic theme content goes here!</div>
+				</div>
+				<div class="card-container flex-fill">
+					<div class="card">Dynamic theme content goes here!</div>
+				</div>
+				<div class="card-container flex-fill">
+					<div class="card">Dynamic theme content goes here!</div>
+				</div>
+				<div class="card-container flex-fill">
+					<div class="card">Dynamic theme content goes here!</div>
+				</div>
+				<div class="card-container flex-fill">
+					<div class="card">Dynamic theme content goes here!</div>
+				</div>
+				<div class="card-container flex-fill">
+					<div class="card">Dynamic theme content goes here!</div>
+				</div>
+				<div class="card-container flex-fill">
+					<div class="card">Dynamic theme content goes here!</div>
+				</div>
+				
+			</div>
+
+		</div>
+
+	</section>
+
+		<!-- <button class="btn button-primary">Primary Button</button>
+		<button class="btn button-secondary">Secondary Button</button> -->
+
+</div>
+
 
 	<footer class="container">
-		<p class="text-center">
-			© Copyright 2024 Something, something, something Dark Side.
-		</p>
+		<div class="row">
+			<p class="col text-center">
+				© Copyright 2024 Something, something, something Dark Side.
+			</p>
+		</div>
 	</footer>
 </body>
 
 <!-- Our codes -->
-<script src="js/main.js"></script>
+<script src="js/apiservice.js" type="module"></script>
+<script src="js/viewmodel.js" type="module"></script>
+<script src="js/main.js" type="module"></script>
 
 </html>
