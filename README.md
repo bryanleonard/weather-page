@@ -6,4 +6,4 @@ No build process  or `npm` required.
 
 It's just HTML, CSS, and Javascript. Easiest way is to open `index.html` via VSCode and the Live Server extension.
 
-Or visit a live example at [https://forcequit.io/weather-page](https://www.forcequit.io/weather-page).
+Or visit a live example at [https://bryanleonard.github.io/weather-page](https://bryanleonard.github.io/weather-page)
