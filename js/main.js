@@ -11,8 +11,16 @@ const loader = document.getElementById("loader");
 
 const themeSwitcher = document.getElementById("theme-switcher");
 
+const currentYear = document.getElementById("currentYear");
+
 function setTheme(theme) {
 	document.documentElement.className = theme;
+}
+
+function setCurrentYear() {
+	if (currentYear) {
+		currentYear.textContent = new Date().getFullYear();
+	}
 }
 
 // Change theme
@@ -107,3 +115,5 @@ viewModel.subscribe(updateView);
 
 // Trigger API calls
 viewModel.loadLocations("locations.json");
+
+setCurrentYear();

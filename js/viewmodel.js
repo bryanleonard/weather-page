@@ -24,7 +24,6 @@ export class ViewModel {
 		this.listeners.forEach((listener) => listener(this.state));
 	}
 
-
 	async loadWeather(endpoint) {
 		this.state.loadingWeather = true;
 		this.notify();
@@ -56,7 +55,4 @@ export class ViewModel {
 			this.notify();
 		}
 	}
-
-
-
 }
